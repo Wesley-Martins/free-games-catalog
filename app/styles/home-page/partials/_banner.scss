@@ -1,0 +1,33 @@
+@import '../../abstract/varsAndClasses';
+
+.main {
+    padding: 0 9vw;
+    min-height: 100vh;
+}
+
+.banner-container {
+    padding: 1.5rem 0;
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: 2fr 1.25fr;
+    grid-template-rows: auto 1fr;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: $text-color-primary;
+    }
+    .banner {
+        grid-row: 2/3;
+        opacity: 0.6;
+        height: 350px;
+    }
+    .banner-principal {
+        background: 
+        url(../../images/banner-images/banner-image-1.jpg) no-repeat center/cover;
+    }
+    .banner-secondary {
+        background: 
+        url(../../images/banner-images/banner-image-2.jpg) no-repeat center/cover;
+    }
+    
+}

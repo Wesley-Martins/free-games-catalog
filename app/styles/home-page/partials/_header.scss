@@ -1,0 +1,54 @@
+@import '../../abstract/varsAndClasses';
+@import '../../abstract/fonts';
+
+body {
+    background: $color-primary;
+}
+
+.content {
+    min-height: 100vh;
+    font-family: $principal-font;
+}
+
+.header {
+    background: $color-secondary;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 9vw;
+    height: 55px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        text-decoration: none;
+        font-family: $logo-font;
+        font-size: 1.5rem;
+        color: $text-color-primary;
+        &__icon {
+            height: 36px;
+            width: 36px;
+        }
+    }
+    .theme-btn {
+        background: rgb(214, 214, 214);
+        border: none;
+        cursor: pointer;
+        border-radius: 14px;
+        position: relative;
+        height: 16px;
+        width: 40px;
+        &__icon {
+            display: block;
+            position: absolute;
+            background: url(../../images/icons/light-dark-icon.svg) no-repeat center/cover;
+            transform: translate(-6px, -50%);
+            transition: transform 0.25s;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+        }
+    }
+}

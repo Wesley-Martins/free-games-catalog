@@ -1,0 +1,88 @@
+.slide-right {
+  transform: translate(64%, -50%) !important;
+}
+
+body {
+  background: #1B2838;
+}
+
+.content {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+}
+
+.header {
+  background: #1F3445;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 9vw;
+  height: 55px;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+  color: #c7d5e0;
+}
+.header .logo__icon {
+  height: 36px;
+  width: 36px;
+}
+.header .theme-btn {
+  background: rgb(214, 214, 214);
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  position: relative;
+  height: 16px;
+  width: 40px;
+}
+.header .theme-btn__icon {
+  display: block;
+  position: absolute;
+  background: url(../../images/icons/light-dark-icon.svg) no-repeat center/cover;
+  transform: translate(-6px, -50%);
+  transition: transform 0.25s;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+
+.slide-right {
+  transform: translate(64%, -50%) !important;
+}
+
+.main {
+  padding: 0 9vw;
+  min-height: 100vh;
+}
+
+.banner-container {
+  padding: 1.5rem 0;
+  display: grid;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  grid-template-columns: 2fr 1.25fr;
+  grid-template-rows: auto 1fr;
+}
+.banner-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #c7d5e0;
+}
+.banner-container .banner {
+  grid-row: 2/3;
+  opacity: 0.6;
+  height: 350px;
+}
+.banner-container .banner-principal {
+  background: url(../../images/banner-images/banner-image-1.jpg) no-repeat center/cover;
+}
+.banner-container .banner-secondary {
+  background: url(../../images/banner-images/banner-image-2.jpg) no-repeat center/cover;
+}/*# sourceMappingURL=style.css.map */
