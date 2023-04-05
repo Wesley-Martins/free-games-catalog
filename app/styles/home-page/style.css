@@ -1,5 +1,9 @@
 .slide-right {
-  transform: translate(64%, -50%) !important;
+  transform: translate(80%, -50%) !important;
+}
+
+.hidden {
+  display: none !important;
 }
 
 body {
@@ -45,44 +49,98 @@ body {
 .header .theme-btn__icon {
   display: block;
   position: absolute;
-  background: url(../../images/icons/light-dark-icon.svg) no-repeat center/cover;
   transform: translate(-6px, -50%);
   transition: transform 0.25s;
-  border-radius: 50%;
-  height: 28px;
-  width: 28px;
 }
 
 .slide-right {
-  transform: translate(64%, -50%) !important;
+  transform: translate(80%, -50%) !important;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .main {
-  padding: 0 9vw;
   min-height: 100vh;
 }
 
 .banner-container {
   padding: 1.5rem 0;
   display: grid;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  grid-template-columns: 2fr 1.25fr;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(3, 325px);
   grid-template-rows: auto 1fr;
 }
 .banner-container h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  grid-column: 1/-1;
   color: #c7d5e0;
 }
 .banner-container .banner {
   grid-row: 2/3;
   opacity: 0.6;
-  height: 350px;
+  height: 225px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.banner-container .banner-principal {
-  background: url(../../images/banner-images/banner-image-1.jpg) no-repeat center/cover;
+.banner-container .banner:nth-of-type(1) {
+  background-image: url(../../images/banner-images/banner-image-1.jpg);
 }
-.banner-container .banner-secondary {
-  background: url(../../images/banner-images/banner-image-2.jpg) no-repeat center/cover;
+.banner-container .banner:nth-of-type(2) {
+  background-image: url(../../images/banner-images/banner-image-2.jpg);
+}
+.banner-container .banner:nth-of-type(3) {
+  background-image: url(../../images/banner-images/banner-image-3.jpg);
+}
+
+.slide-right {
+  transform: translate(80%, -50%) !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.games {
+  padding: 1rem 9vw;
+}
+
+.options {
+  display: flex;
+  border: none;
+}
+.options div {
+  flex-basis: 100%;
+}
+.options__legend {
+  color: #7a8288;
+  font-size: 1.2rem;
+}
+.options__drop-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #c7d5e0;
+}
+.options__drop-btn:hover {
+  color: white;
+}
+.options__drop-btn i {
+  margin-left: 8px;
+}
+.options__drop-menu {
+  background-color: #1F3445;
+  list-style: none;
+  text-align: center;
+  margin: 4px 0 0 82px;
+  width: 150px;
+}
+.options__drop-btn, .options__btn {
+  background: none;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

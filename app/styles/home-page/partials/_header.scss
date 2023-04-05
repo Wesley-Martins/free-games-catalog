@@ -43,12 +43,8 @@ body {
         &__icon {
             display: block;
             position: absolute;
-            background: url(../../images/icons/light-dark-icon.svg) no-repeat center/cover;
             transform: translate(-6px, -50%);
             transition: transform 0.25s;
-            border-radius: 50%;
-            height: 28px;
-            width: 28px;
         }
     }
 }

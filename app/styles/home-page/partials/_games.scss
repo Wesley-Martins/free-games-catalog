@@ -1,0 +1,40 @@
+@import '../../abstract/varsAndClasses';
+
+.games {
+    padding: 1rem 9vw;
+}
+
+.options {
+    display: flex;
+    border: none;
+    div {
+        flex-basis: 100%;
+    }
+    &__legend {
+        color: $text-color-secondary;
+        font-size: 1.2rem;
+    }
+    &__drop-btn {
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: $text-color-primary;
+        &:hover {
+            color: white;
+        }
+        i {
+            margin-left: 8px;
+        }
+    }
+    &__drop-menu {
+        background-color: $color-secondary;
+        list-style: none;
+        text-align: center;
+        margin: 4px 0 0 82px;
+        width: 150px;
+    }
+    &__drop-btn,
+    &__btn {
+        background: none;
+        border: none;
+    }
+}

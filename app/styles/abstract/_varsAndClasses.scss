@@ -6,5 +6,9 @@ $text-color-primary: #c7d5e0;
 $text-color-secondary: #7a8288;
 
 .slide-right {
-    transform: translate(64%, -50%) !important;
+    transform: translate(80%, -50%) !important;
+}
+
+.hidden {
+    display: none !important;
 }

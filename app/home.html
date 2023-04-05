@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/home-page/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-YqHTFsB0fTVlZC9FiOm81jI5e5c5w6f5pbgC85m6UgKdpU+NVHgp2i6m9SRa/2HK/81RwZwYdZM7DT3qfjKcIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="content">
@@ -22,14 +25,43 @@
                 <i><img class="logo__icon" src="./images/icons/controller-icon.png" alt="free-games-catalog-logo"></i>
                 <span class="logo__span">FGC</span>
             </a>
-            <button id="theme-btn" class="theme-btn"><span class="theme-btn__icon"></span></button>
+            <button id="theme-btn" class="theme-btn"><i class="theme-btn__icon fa-solid fa-sun fa-xl"></i></button>
         </header>
         <main class="main">
             <div class="banner-container">
                 <h2>The best free games for PC and Browser!</h2>
-                <div class="banner banner-principal"></div>
-                <div class="banner banner-secondary"></div>
+                <div class="banner"></div>
+                <div class="banner"></div>
+                <div class="banner"></div>
             </div>
+            <section class="games">
+                <fieldset class="options">
+                    <div>
+                        <span class="options__legend">Platform:</span>
+                        <button class="options__drop-btn" id="">butao<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <ul class="options__drop-menu">
+                            <li><button class="options__btn" value="">oi</button></li>
+                            <li><button class="options__btn" value="">oi</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="options__legend">Genre/Tag:</span>
+                        <button class="options__drop-btn" id="">butao<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <ul class="options__drop-menu">
+                            <li><button class="options__btn" value="">oi</button></li>
+                            <li><button class="options__btn" value="">oi</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="options__legend">Sort By:</span>
+                        <button class="options__drop-btn" id="">butao<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <ul class="options__drop-menu">
+                            <li><button class="options__btn" value="">oi</button></li>
+                            <li><button class="options__btn" value="">oi</button></li>
+                        </ul>
+                    </div>
+                </fieldset>
+            </section>
         </main>
     </div>
     <script src="./js/themeBtn.js"></script>
