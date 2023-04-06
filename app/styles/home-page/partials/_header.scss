@@ -43,8 +43,8 @@ body {
         &__icon {
             display: block;
             position: absolute;
-            transform: translate(-6px, -50%);
-            transition: transform 0.25s;
+            left: -9%;
+            transition: all 0.25s;
         }
     }
 }

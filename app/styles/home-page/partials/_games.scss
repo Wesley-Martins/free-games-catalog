@@ -9,6 +9,12 @@
     border: none;
     div {
         flex-basis: 100%;
+        display: grid;
+        gap: 4px 4px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 25px auto;
+        position: relative;
+        align-items: start;
     }
     &__legend {
         color: $text-color-secondary;
@@ -17,6 +23,7 @@
     &__drop-btn {
         cursor: pointer;
         font-size: 1.2rem;
+        justify-self: start;
         color: $text-color-primary;
         &:hover {
             color: white;
@@ -25,16 +32,91 @@
             margin-left: 8px;
         }
     }
-    &__drop-menu {
+    .dropdown-menu {
         background-color: $color-secondary;
+        border-radius: 4px;
+        padding: 4px 0;
         list-style: none;
         text-align: center;
-        margin: 4px 0 0 82px;
-        width: 150px;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        position: absolute;
+        z-index: 1;
+        min-height: auto;
+        max-height: 145px;
+        width: 200px;
+        overflow-y: auto;
     }
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: $text-color-primary;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $text-color-secondary;
+        height: 20px;
+    }
+    
+    li {
+        padding: 5px 0;
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+    .dropdown-menu__btn {
+        display: block;
+        color: $text-color-primary;
+        text-decoration: none;
+        font-size: 1.2rem;
+        &:hover {
+            color: white;
+        }
+        i {
+            margin-right: 6px;
+        }
+    }
+    .dropdown-menu__h {
+        font-size: 1.1rem;
+        color: $text-color-secondary;
+    }
+
     &__drop-btn,
-    &__btn {
+    .dropdown-menu__btn {
         background: none;
         border: none;
+    }
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid $text-color-secondary;
+    opacity: 0.15;
+    margin: 25px 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    row-gap: 1.25rem;
+}
+.card {
+    flex-basis: calc(33% - 0.5rem);
+    background-color: $color-secondary;
+    border-radius: 6px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 300px;
+    &__img-wrapper {
+        .card__img {
+            height: 150px;
+            width: 100%;
+        }
+    }
+    &__body {
+        padding: 0.5rem;
     }
 }

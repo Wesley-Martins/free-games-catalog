@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/home-page/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-YqHTFsB0fTVlZC9FiOm81jI5e5c5w6f5pbgC85m6UgKdpU+NVHgp2i6m9SRa/2HK/81RwZwYdZM7DT3qfjKcIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -38,29 +38,241 @@
                 <fieldset class="options">
                     <div>
                         <span class="options__legend">Platform:</span>
-                        <button class="options__drop-btn" id="">butao<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
-                        <ul class="options__drop-menu">
-                            <li><button class="options__btn" value="">oi</button></li>
-                            <li><button class="options__btn" value="">oi</button></li>
+                        <button class="options__drop-btn" id="">All Platforms<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">
+                                    <i class="fa-brands fa-windows"></i>Windows (PC)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">
+                                    <i class="fa-solid fa-window-maximize"></i>Browser (Web)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">
+                                    All Platforms
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <span class="options__legend">Genre/Tag:</span>
-                        <button class="options__drop-btn" id="">butao<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
-                        <ul class="options__drop-menu">
-                            <li><button class="options__btn" value="">oi</button></li>
-                            <li><button class="options__btn" value="">oi</button></li>
+                        <button class="options__drop-btn" id="">All Genres<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <ul class="dropdown-menu">
+                            <h6 class="dropdown-menu__h">Genres:</h6>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">All Genres</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">MMO</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">MMORPG</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Shooter</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Strategy</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Moba</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Card Games</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Racing</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Sports</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Social</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Fighting</a>
+                            </li>
+                            <h6 class="dropdown-menu__h">Tags:</h6>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">MMOFPS</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Action RPG</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Sandbox</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Open World</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Survival</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Battle Royale</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">MMOTPS</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Anime</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">PvP</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">PvE</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Pixel</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">MMORTS</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Fantasy</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Sci-Fi</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Voxel</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Zombie</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Turn-Based</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">First Person View</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Third Person View</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Top-Down View</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">3D Graphics</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">2D Graphics</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Tank</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Space</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Sailing</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Side Scoller</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Superhero</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Permadeath</a>
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <span class="options__legend">Sort By:</span>
-                        <button class="options__drop-btn" id="">butao<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
-                        <ul class="options__drop-menu">
-                            <li><button class="options__btn" value="">oi</button></li>
-                            <li><button class="options__btn" value="">oi</button></li>
+                        <button class="options__drop-btn" id="">Relevance<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Relevance</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Popularity</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Release Date</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu__btn" href="#">Alphabetical</a>
+                            </li>
                         </ul>
                     </div>
                 </fieldset>
+                <hr>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                        <div class="card__body">
+                            <a class="card__game-title" href="#"><h4>Game title here</h4></a>
+                            <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                            <div class="card__icons">
+                                <span class="card__genre">MMORPG</span>
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                        <div class="card__body">
+                            <a class="card__game-title" href="#"><h4>Game title here</h4></a>
+                            <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                            <div class="card__icons">
+                                <span class="card__genre">MMORPG</span>
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                        <div class="card__body">
+                            <a class="card__game-title" href="#"><h4>Game title here</h4></a>
+                            <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                            <div class="card__icons">
+                                <span class="card__genre">MMORPG</span>
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                        <div class="card__body">
+                            <a class="card__game-title" href="#"><h4>Game title here</h4></a>
+                            <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                            <div class="card__icons">
+                                <span class="card__genre">MMORPG</span>
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                        <div class="card__body">
+                            <a class="card__game-title" href="#"><h4>Game title here</h4></a>
+                            <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                            <div class="card__icons">
+                                <span class="card__genre">MMORPG</span>
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                        <div class="card__body">
+                            <a class="card__game-title" href="#"><h4>Game title here</h4></a>
+                            <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+                            <div class="card__icons">
+                                <span class="card__genre">MMORPG</span>
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
