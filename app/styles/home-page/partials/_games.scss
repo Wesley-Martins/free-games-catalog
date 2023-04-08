@@ -41,7 +41,7 @@
         grid-row: 2/3;
         grid-column: 2/3;
         position: absolute;
-        z-index: 1;
+        z-index: 5;
         min-height: auto;
         max-height: 145px;
         width: 200px;
@@ -103,20 +103,65 @@ hr {
     row-gap: 1.25rem;
 }
 .card {
-    flex-basis: calc(33% - 0.5rem);
-    background-color: $color-secondary;
-    border-radius: 6px;
-    overflow: hidden;
+    flex-basis: calc(33.33% - 0.5rem);
+    max-width: calc(33.33% - 0.5rem);
     display: grid;
     grid-template-rows: auto 1fr;
+    position: relative;
+    overflow: hidden;
     height: 300px;
+    border-radius: 6px;
+    background-color: $color-secondary;
+    transition: transform 0.3s;
+    &:hover {
+        transform: translateY(-2%);
+        z-index: 1;
+        .card__img {
+            opacity: 0.8;
+        }
+    }
+    
     &__img-wrapper {
         .card__img {
             height: 150px;
             width: 100%;
+            
         }
     }
     &__body {
-        padding: 0.5rem;
+        display: grid;
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    }
+    &__game-title {
+        color: $text-color-primary;
+        font-size: 1.5rem;
+        text-decoration: none;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__desc {
+        color: $text-color-secondary;
+        font-size: 1.25rem;
+        white-space: nowrap;
+    }
+    &__icons {
+        align-self: end;
+        justify-self: end;
+        color: $text-color-primary;
+        .card__genre {
+            background-color: $text-color-primary;
+            color: $color-primary;
+            font-size: 0.93rem;
+            font-weight: bold;
+            border-radius: 4px;
+            padding: 0 4px;
+            margin-right: 5px;
+        }
     }
 }
