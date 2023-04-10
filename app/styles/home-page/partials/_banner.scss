@@ -5,34 +5,25 @@
 }
 
 .banner-container {
-    padding: 1.5rem 0;
+    padding: 5rem 0 2rem 0;
     display: grid;
     column-gap: 0.5rem;
     justify-content: center;
-    grid-template-columns: repeat(3, 325px);
-    grid-template-rows: auto 1fr;
+
     h2 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
         grid-column: 1/-1;
         color: $text-color-primary;
     }
+    
     .banner {
         grid-row: 2/3;
         opacity: 0.6;
-        height: 225px;
+        height: 170px;
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-    }
-    .banner:nth-of-type(1) {
-        background-image: url(../../images/banner-images/banner-image-1.jpg);
-    }
-    .banner:nth-of-type(2) {
-        background-image: url(../../images/banner-images/banner-image-2.jpg);
-    }
-    .banner:nth-of-type(3) {
-        background-image: url(../../images/banner-images/banner-image-3.jpg);
     }
 }

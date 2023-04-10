@@ -1,25 +1,47 @@
 @import '../../abstract/varsAndClasses';
 
 .games {
-    padding: 1rem 9vw;
+    @media(min-width: 0) {
+        padding: 1rem 7vw;
+    }
+    @media(min-width: 1378px) {
+        padding: 1rem 12vw;
+    }
+    @media(min-width: 1850px) {
+        padding: 1rem 20vw;
+    }
 }
 
 .options {
     display: flex;
     border: none;
+    @media(min-width: 0) {
+        flex-direction: column;
+        row-gap: 0.6rem;
+    }
+    @media(min-width: 768px) {
+        flex-direction: row;
+        column-gap: 0.75rem;
+    }
+    @media(min-width: 1024px) {
+        column-gap: 5rem;
+    }
+
     div {
-        flex-basis: 100%;
         display: grid;
         gap: 4px 4px;
         grid-template-columns: auto 1fr;
         grid-template-rows: 25px auto;
         position: relative;
         align-items: start;
+        white-space: nowrap;
     }
+
     &__legend {
         color: $text-color-secondary;
         font-size: 1.2rem;
     }
+
     &__drop-btn {
         cursor: pointer;
         font-size: 1.2rem;
@@ -28,10 +50,12 @@
         &:hover {
             color: white;
         }
+
         i {
             margin-left: 8px;
         }
     }
+
     .dropdown-menu {
         background-color: $color-secondary;
         border-radius: 4px;
@@ -39,14 +63,20 @@
         list-style: none;
         text-align: center;
         grid-row: 2/3;
-        grid-column: 2/3;
         position: absolute;
         z-index: 5;
         min-height: auto;
-        max-height: 145px;
+        max-height: 190px;
         width: 200px;
         overflow-y: auto;
+        @media(min-width: 0) {
+            grid-column: 1/-1;
+        }
+        @media(min-width: 1024px) {
+            grid-column: 2/3;
+        }
     }
+    
     ::-webkit-scrollbar {
         width: 12px;
     }
@@ -64,6 +94,7 @@
             background-color: $color-primary;
         }
     }
+
     .dropdown-menu__btn {
         display: block;
         color: $text-color-primary;
@@ -72,12 +103,14 @@
         &:hover {
             color: white;
         }
+
         i {
             margin-right: 6px;
         }
     }
+
     .dropdown-menu__h {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         color: $text-color-secondary;
     }
 
@@ -95,46 +128,63 @@ hr {
     margin: 25px 0;
 }
 
+
+$column-gap: 1.4rem;
+$row-gap: 1.6rem;
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 0.5rem;
-    row-gap: 1.25rem;
+    column-gap: $column-gap;
+    row-gap: $row-gap;
 }
+
 .card {
-    flex-basis: calc(33.33% - 0.5rem);
-    max-width: calc(33.33% - 0.5rem);
-    display: grid;
-    grid-template-rows: auto 1fr;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    position: relative;
     height: 300px;
     border-radius: 6px;
     background-color: $color-secondary;
     transition: transform 0.3s;
     &:hover {
-        transform: translateY(-2%);
-        z-index: 1;
+        transform: scale(1.02);
         .card__img {
             opacity: 0.8;
         }
     }
-    
+    @media(min-width: 0px) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    @media(min-width: 525px) {
+        flex-basis: calc(50% - ((1 * $column-gap) / 2));
+        max-width: calc(50% - ((1 * $column-gap) / 2 ));
+    }
+    @media(min-width: 1024px) {
+        flex-basis: calc(33.33% - ((2 * $column-gap) / 3));
+        max-width: calc(33.33% - ((2 * $column-gap) / 3));
+    }
+    @media(min-width: 1378px) {
+        flex-basis: calc(25% - ((3 * $column-gap) / 4));
+        max-width: calc(25% - ((3 * $column-gap) / 4));
+    }
+
     &__img-wrapper {
         .card__img {
             height: 150px;
             width: 100%;
-            
         }
     }
+
     &__body {
         display: grid;
+        height: 100%;
         padding: 1.5rem 1.2rem 1.2rem 1.2rem;
     }
+
     &__game-title {
         color: $text-color-primary;
-        font-size: 1.5rem;
         text-decoration: none;
         &::before {
             content: '';
@@ -144,16 +194,32 @@ hr {
             height: 100%;
             width: 100%;
         }
+        @media(min-width: 0) {
+            font-size: 1.3rem;
+        }
+        @media(min-width: 1024px) {
+            font-size: 1.5rem;
+        }
     }
+
     &__desc {
         color: $text-color-secondary;
-        font-size: 1.25rem;
         white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        @media(min-width: 0) {
+            font-size: 1rem;
+        }
+        @media(min-width: 1024px) {
+            font-size: 1.2rem;
+        }
     }
+
     &__icons {
         align-self: end;
         justify-self: end;
         color: $text-color-primary;
+
         .card__genre {
             background-color: $text-color-primary;
             color: $color-primary;
