@@ -1,5 +1,5 @@
-@import '../../abstract/varsAndClasses';
-@import '../../abstract/fonts';
+@import '../abstract/varsAndClasses';
+@import '../abstract/fonts';
 
 body {
     background: $color-primary;
@@ -7,6 +7,7 @@ body {
 
 .content {
     min-height: 100vh;
+    position: relative;
     font-family: $principal-font;
 }
 
@@ -16,7 +17,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 10;
     width: 100%;
     height: 55px;

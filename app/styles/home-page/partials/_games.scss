@@ -1,15 +1,7 @@
 @import '../../abstract/varsAndClasses';
 
 .games {
-    @media(min-width: 0) {
-        padding: 1rem 7vw;
-    }
-    @media(min-width: 1378px) {
-        padding: 1rem 12vw;
-    }
-    @media(min-width: 1850px) {
-        padding: 1rem 20vw;
-    }
+    padding: 5rem 0;
 }
 
 .options {

@@ -1,0 +1,7 @@
+@import '../../abstract/fonts';
+@import '../../abstract/varsAndClasses';
+
+.game-profile-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}

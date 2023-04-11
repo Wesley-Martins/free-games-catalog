@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Karla&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap);
 .slide-right {
   left: 54% !important;
 }
@@ -12,6 +14,7 @@ body {
 
 .content {
   min-height: 100vh;
+  position: relative;
   font-family: "Karla", sans-serif;
 }
 
@@ -21,7 +24,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 10;
   width: 100%;
   height: 55px;
@@ -81,66 +85,36 @@ body {
 .main {
   min-height: 100vh;
 }
+@media (min-width: 0) {
+  .main {
+    padding: 1rem 7vw;
+  }
+}
+@media (min-width: 1378px) {
+  .main {
+    padding: 1rem 12vw;
+  }
+}
+@media (min-width: 1850px) {
+  .main {
+    padding: 1rem 22vw;
+  }
+}
 
-.banner {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: auto 1fr;
-  align-items: center;
-  row-gap: 1rem;
-  padding: 5rem 10px;
+.top-container {
+  padding-top: 2rem;
 }
-.banner__title {
-  grid-row: 1/2;
-  grid-column: 1/-1;
-  font-size: 2rem;
-  color: #c7d5e0;
-  white-space: nowrap;
-  text-align: center;
-}
-.banner__carousel-arrow {
-  background-color: rgba(122, 130, 136, 0.2);
-  cursor: pointer;
-}
-.banner__carousel-arrow i {
+.top-container__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
   color: #c7d5e0;
 }
-.banner #carousel-left {
-  justify-self: end;
-  padding: 14px 0 14px 5px;
+.top-container__desc {
+  font-size: 1.4rem;
+  color: #7a8288;
 }
-.banner #carousel-right {
-  justify-self: start;
-  padding: 14px 5px 14px 0;
-}
-.banner__game {
-  opacity: 0.6;
-  position: relative;
-  height: 300px;
-  width: 600px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.banner__game-info {
-  background-color: #1F3445;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 6px 4px 4px 4px;
-  height: 100px;
-  width: 250px;
-}
-.banner__game-info h4 {
-  text-align: center;
-}
-.banner__game-info a {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-}
-.banner__game:nth-of-type(1) {
-  background-image: url(../../images/banner-images/banner-image-1.jpg);
+.top-container__desc i {
+  color: #c7d5e0;
 }
 
 .slide-right {
@@ -151,20 +125,8 @@ body {
   display: none !important;
 }
 
-@media (min-width: 0) {
-  .games {
-    padding: 1rem 7vw;
-  }
-}
-@media (min-width: 1378px) {
-  .games {
-    padding: 1rem 12vw;
-  }
-}
-@media (min-width: 1850px) {
-  .games {
-    padding: 1rem 20vw;
-  }
+.games {
+  padding: 5rem 0;
 }
 
 .options {

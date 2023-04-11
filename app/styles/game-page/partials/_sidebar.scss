@@ -1,0 +1,52 @@
+@import '../../abstract/fonts';
+@import '../../abstract/varsAndClasses';
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+        height: 220px;
+        width: 350px;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        margin: 1rem 0;
+    }
+
+    &__btns-container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto 1fr;
+        background-color: $color-secondary;
+        border-radius: 4px;
+        padding: 6px 8px;
+
+        .sidebar__thumbs {
+            color: $text-color-primary;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        #thb-up:hover {
+            color: rgb(43, 99, 43);
+        }
+        #thb-down:hover {
+            color: rgb(183, 61, 61);
+        }
+
+
+        .sidebar__game-link {
+            border-radius: 4px;
+            width: 100%;
+            padding: 15px 0;
+            font-size: 1.4rem;
+            text-align: center;
+            text-decoration: none;
+            color: $text-color-primary;
+            background-color: $color-terciary;
+
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+}
