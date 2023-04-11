@@ -146,9 +146,10 @@ $row-gap: 1.6rem;
     height: 300px;
     border-radius: 6px;
     background-color: $color-secondary;
-    transition: transform 0.3s;
+    transition: transform 0.25s, box-shadow 0.25s;
     &:hover {
         transform: scale(1.02);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
         .card__img {
             opacity: 0.8;
         }

@@ -82,27 +82,65 @@ body {
   min-height: 100vh;
 }
 
-.banner-container {
-  padding: 5rem 0 2rem 0;
+.banner {
   display: grid;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-  justify-content: center;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 5rem 10px;
 }
-.banner-container h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.banner__title {
+  grid-row: 1/2;
   grid-column: 1/-1;
+  font-size: 2rem;
+  color: #c7d5e0;
+  white-space: nowrap;
+  text-align: center;
+}
+.banner__carousel-arrow {
+  background-color: rgba(122, 130, 136, 0.2);
+  cursor: pointer;
+}
+.banner__carousel-arrow i {
   color: #c7d5e0;
 }
-.banner-container .banner {
-  grid-row: 2/3;
+.banner #carousel-left {
+  justify-self: end;
+  padding: 14px 0 14px 5px;
+}
+.banner #carousel-right {
+  justify-self: start;
+  padding: 14px 5px 14px 0;
+}
+.banner__game {
   opacity: 0.6;
-  height: 170px;
-  width: 100%;
+  position: relative;
+  height: 300px;
+  width: 600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.banner__game-info {
+  background-color: #1F3445;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 6px 4px 4px 4px;
+  height: 100px;
+  width: 250px;
+}
+.banner__game-info h4 {
+  text-align: center;
+}
+.banner__game-info a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.banner__game:nth-of-type(1) {
+  background-image: url(../../images/banner-images/banner-image-1.jpg);
 }
 
 .slide-right {
@@ -262,10 +300,11 @@ hr {
   height: 300px;
   border-radius: 6px;
   background-color: #1F3445;
-  transition: transform 0.3s;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 .card:hover {
   transform: scale(1.02);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
 .card:hover .card__img {
   opacity: 0.8;
