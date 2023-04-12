@@ -1,16 +1,22 @@
-@import '../../abstract/fonts';
 @import '../../abstract/varsAndClasses';
 
 .sidebar {
     display: flex;
     flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+
+    &__sticky {
+        position: sticky;
+        top: 80px;
+    }
 
     &__img {
         height: 220px;
         width: 350px;
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
-        margin: 1rem 0;
+        margin-bottom: 1rem;
     }
 
     &__btns-container {
@@ -44,6 +50,10 @@
             color: $text-color-primary;
             background-color: $color-terciary;
 
+
+            &:hover {
+                color: white;
+            }
             i {
                 margin-left: 5px;
             }
