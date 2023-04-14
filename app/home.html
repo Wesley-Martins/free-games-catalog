@@ -20,180 +20,173 @@
                     <i><img class="logo__icon" src="./images/icons/controller-icon.png" alt="free-games-catalog-logo"></i>
                     <span class="logo__span">FGC</span>
                 </a>
-                <button id="theme-btn" class="theme-btn"><i class="theme-btn__icon fa-solid fa-sun fa-xl"></i></button>
             </nav>
         </header>
         <main class="main">
             <div class="top-container">
                 <h2 class="top-container__title">The best free games for PC and Browser!</h2>
-                <p class="top-container__desc">There are current <i>"X"</i> games available in the list!</p>
+                <p class="top-container__desc">There are currently <i>"X"</i> games available in the list!</p>
             </div>
             <section class="games">
                 <fieldset class="options">
                     <div>
                         <span class="options__legend">Platform:</span>
-                        <button class="options__drop-btn" id="">All Platforms<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <button class="options__drop-btn" data-type="platform">All Platforms<i class="fa-solid fa-circle-chevron-down fa-lg"></i></button>
                         <ul class="dropdown-menu hidden">
                             <li>
-                                <a class="dropdown-menu__btn" href="#">
-                                    <i class="fa-brands fa-windows fa-lg"></i>Windows (PC)
-                                </a>
+                                <a class="dropdown-menu__btn" data-type="platform" href="#"><i class="fa-brands fa-windows fa-lg"></i>Windows (PC)</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">
-                                    <i class="fa-solid fa-window-maximize"></i>Browser (Web)
-                                </a>
+                                <a class="dropdown-menu__btn" data-type="platform" href="#"><i class="fa-solid fa-window-maximize"></i>Browser (Web)</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">
-                                    All Platforms
-                                </a>
+                                <a class="dropdown-menu__btn" data-type="platform" href="#">All Platforms</a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <span class="options__legend">Genre/Tag:</span>
-                        <button class="options__drop-btn" id="">All Genres<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <button class="options__drop-btn" data-type="genre">All Genres<i class="fa-solid fa-circle-chevron-down fa-lg"></i></button>
                         <ul class="dropdown-menu hidden">
                             <h6 class="dropdown-menu__h">Genres:</h6>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">All Genres</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">All Genres</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">MMO</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">MMO</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">MMORPG</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">MMORPG</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Shooter</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Shooter</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Strategy</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Strategy</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Moba</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Moba</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Card Games</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Card Games</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Racing</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Racing</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Sports</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Sports</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Social</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Social</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Fighting</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Fighting</a>
                             </li>
                             <h6 class="dropdown-menu__h">Tags:</h6>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">MMOFPS</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">MMOFPS</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Action RPG</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Action RPG</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Sandbox</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Sandbox</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Open World</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Open World</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Survival</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Survival</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Battle Royale</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Battle Royale</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">MMOTPS</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">MMOTPS</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Anime</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Anime</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">PvP</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">PvP</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">PvE</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">PvE</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Pixel</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Pixel</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">MMORTS</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">MMORTS</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Fantasy</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Fantasy</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Sci-Fi</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Sci-Fi</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Action</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Action</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Voxel</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Voxel</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Zombie</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Zombie</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Turn-Based</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Turn-Based</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">First Person View</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">First Person View</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Third Person View</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Third Person View</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Top-Down View</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Top-Down View</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">3D Graphics</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">3D Graphics</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">2D Graphics</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">2D Graphics</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Tank</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Tank</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Space</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Space</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Sailing</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Sailing</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Side Scoller</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Side Scoller</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Superhero</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Superhero</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Permadeath</a>
+                                <a class="dropdown-menu__btn" data-type="genre" href="#">Permadeath</a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <span class="options__legend">Sort By:</span>
-                        <button class="options__drop-btn" id="">Relevance<i class="fa-solid fa-circle-chevron-down fa-lg" style="color: #2f89bc"></i></i></button>
+                        <button class="options__drop-btn" data-type="sort">Relevance<i class="fa-solid fa-circle-chevron-down fa-lg"></i></button>
                         <ul class="dropdown-menu hidden">
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Relevance</a>
+                                <a class="dropdown-menu__btn" data-type="sort" href="#">Relevance</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Popularity</a>
+                                <a class="dropdown-menu__btn" data-type="sort" href="#">Popularity</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Release Date</a>
+                                <a class="dropdown-menu__btn" data-type="sort" href="#">Release Date</a>
                             </li>
                             <li>
-                                <a class="dropdown-menu__btn" href="#">Alphabetical</a>
+                                <a class="dropdown-menu__btn" data-type="sort" href="#">Alphabetical</a>
                             </li>
                         </ul>
                     </div>
@@ -206,73 +199,7 @@
                             <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
                             <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
                             <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
-                                <i class="fa-brands fa-windows fa-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
-                        <div class="card__body">
-                            <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
-                            <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
-                            <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
-                                <i class="fa-brands fa-windows fa-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
-                        <div class="card__body">
-                            <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
-                            <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
-                            <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
-                                <i class="fa-brands fa-windows fa-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
-                        <div class="card__body">
-                            <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
-                            <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
-                            <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
-                                <i class="fa-brands fa-windows fa-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
-                        <div class="card__body">
-                            <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
-                            <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
-                            <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
-                                <i class="fa-brands fa-windows fa-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
-                        <div class="card__body">
-                            <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
-                            <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
-                            <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
-                                <i class="fa-brands fa-windows fa-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
-                        <div class="card__body">
-                            <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
-                            <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
-                            <div class="card__icons">
-                                <span class="card__genre">MMORPG</span>
+                                <span class="card_">MMORPG</span>
                                 <i class="fa-brands fa-windows fa-lg"></i>
                             </div>
                         </div>
@@ -282,6 +209,5 @@
         </main>
     </div>
     <script src="./js/home-page/dropdown-menu.js"></script>
-    <script src="./js/global/themeBtn.js"></script>
 </body>
 </html>

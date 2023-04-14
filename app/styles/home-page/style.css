@@ -44,7 +44,7 @@ body {
 .header .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 55px;
   width: 100%;
 }
@@ -66,21 +66,6 @@ body {
 .header .logo__icon {
   height: 36px;
   width: 36px;
-}
-.header .theme-btn {
-  background: #ECF2FF;
-  border: none;
-  cursor: pointer;
-  border-radius: 14px;
-  position: relative;
-  height: 16px;
-  width: 40px;
-}
-.header .theme-btn__icon {
-  display: block;
-  position: absolute;
-  left: -9%;
-  transition: all 0.25s;
 }
 
 .slide-right {
@@ -186,6 +171,7 @@ body {
   color: #B4BAC6;
 }
 .options__drop-btn i {
+  color: #2f89bc;
   width: 20px;
   height: 20px;
   margin-left: 8px;

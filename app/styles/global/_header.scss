@@ -31,7 +31,7 @@ body {
     .navbar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         height: 55px;
         width: 100%;
         @media(min-width: 1850px) {
@@ -52,23 +52,6 @@ body {
         &__icon {
             height: 36px;
             width: 36px;
-        }
-    }
-
-    .theme-btn {
-        background: #ECF2FF;
-        border: none;
-        cursor: pointer;
-        border-radius: 14px;
-        position: relative;
-        height: 16px;
-        width: 40px;
-        
-        &__icon {
-            display: block;
-            position: absolute;
-            left: -9%;
-            transition: all 0.25s;
         }
     }
 }
