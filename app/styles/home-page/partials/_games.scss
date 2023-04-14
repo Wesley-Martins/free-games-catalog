@@ -35,15 +35,17 @@
     }
 
     &__drop-btn {
+        color: $text-color-primary;
         cursor: pointer;
         font-size: 1.2rem;
         justify-self: start;
-        color: $text-color-primary;
         &:hover {
-            color: white;
+            color: #B4BAC6;
         }
 
         i {
+            width: 20px;
+            height: 20px;
             margin-left: 8px;
         }
     }

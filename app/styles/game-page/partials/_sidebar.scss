@@ -5,18 +5,39 @@
     flex-direction: column;
     position: relative;
     min-height: 100vh;
+    @media(min-width: 0) {
+        min-height: auto;
+    }
+    @media(min-width: 550px) {
+        width: 470px;
+        margin: 0 auto;
+    }
+    @media(min-width: 768px) {
+        width: auto;
+    }
 
     &__sticky {
-        position: sticky;
-        top: 80px;
+        padding-bottom: 2rem;
+        @media(min-width: 0) {
+            position: static;
+        }
+        @media(min-width: 768px) {
+            position: sticky;
+            top: 80px;
+        }
     }
 
     &__img {
         height: 220px;
-        width: 350px;
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
         margin-bottom: 1rem;
+        @media(min-width: 0) {
+            width: 100%;
+        }
+        @media(min-width: 768px) {
+            width: 325px;
+        }
     }
 
     &__btns-container {

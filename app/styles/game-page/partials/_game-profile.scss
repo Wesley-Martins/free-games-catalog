@@ -1,5 +1,10 @@
 .game-profile {
     display: grid;
-    grid-template-columns: auto 1fr;
     padding-top: 1rem;
+    @media(min-width: 0) {
+        grid-template-columns: 1fr;
+    }
+    @media(min-width: 768px) {
+        grid-template-columns: auto 1fr;
+    }
 }
