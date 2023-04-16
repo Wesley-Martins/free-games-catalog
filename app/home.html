@@ -25,7 +25,7 @@
         <main class="main">
             <div class="top-container">
                 <h2 class="top-container__title">The best free games for PC and Browser!</h2>
-                <p class="top-container__desc">There are currently <i>"X"</i> games available in the list!</p>
+                <p class="top-container__desc">There are currently <i id="games-counter"></i> games available in the list!</p>
             </div>
             <section class="games">
                 <fieldset class="options">
@@ -192,14 +192,14 @@
                     </div>
                 </fieldset>
                 <hr>
-                <div class="cards">
+                <div class="games-container">
                     <div class="card">
                         <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
                         <div class="card__body">
                             <a class="card__game-title" href="./game.html"><h4>Game title here</h4></a>
                             <p class="card__desc">Lorem ipsum dolor sit, amet sit i maca</p>
                             <div class="card__icons">
-                                <span class="card_">MMORPG</span>
+                                <span class="card__genre">MMORPG</span>
                                 <i class="fa-brands fa-windows fa-lg"></i>
                             </div>
                         </div>
@@ -209,5 +209,6 @@
         </main>
     </div>
     <script src="./js/home-page/dropdown-menu.js"></script>
+    <script src="./js/home-page/gamesRequest.js"></script>
 </body>
 </html>

@@ -245,7 +245,7 @@ hr {
   margin: 25px 0;
 }
 
-.cards {
+.games-container {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 1.4rem;
