@@ -1,5 +1,8 @@
+let paramaters = new URL(window.location.href).search;
+
+let endpoint = `https://free-to-play-games-database.p.rapidapi.com/api/games${paramaters}`;
 let allGames = [];
-let endpoint = 'https://free-to-play-games-database.p.rapidapi.com/api/games';
+
 let counter = 0;
 
 const gamesContainerElement = document.querySelector('.games-container');
@@ -25,7 +28,7 @@ async function requestAllGames(endpoint) {
         gamesCounterElement.innerText = counter;
 
         const lazyElements = document.querySelectorAll('.lazy');
-        for(let i = 0; i < 15; i++) {
+        for(let i = 0; i < 8; i++) {
             createGame(allGames[i], lazyElements[i]);
         }        
     } 
@@ -33,12 +36,14 @@ async function requestAllGames(endpoint) {
         console.log(error);
     }
 }
+requestAllGames(endpoint);
 
 function createGame(game, lazyElement) {
     const platformIcon = game.platform == 'PC (Windows)' ? 'fa-brands fa-windows' : 'fa-solid fa-window-maximize';
 
     lazyElement.innerHTML = `
-    <div class="card__img-wrapper"><img class="card__img" src="${game.thumbnail}" alt=""></div>
+    <div class="card__img-wrapper"><img class="card__img" src="${game.thumbnail}" alt="${game.title} thumbnail
+    "></div>
     <div class="card__body">
         <a class="card__game-title" href="./game.html"><h4>${game.title}</h4></a>
         <p class="card__desc">${game.short_description}</p>
@@ -47,24 +52,24 @@ function createGame(game, lazyElement) {
                 <i class="${platformIcon} fa-lg"></i>
             </div>
         </div>
+    </div>
     `;
     lazyElement.classList.replace('lazy', 'card');
 }
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    return rect.top > 0 && rect.top <= window.innerHeight;
+    return rect.bottom > 0 && rect.bottom - 200 <= window.innerHeight;
 }
-
-requestAllGames(endpoint);
 
 document.addEventListener('scroll', () => {
     const lazyElements = document.querySelectorAll('.lazy');
     
     lazyElements.forEach(element => {
         if(isInViewport(element)) {
-            const index = document.querySelectorAll('.card').length;
-            createGame(allGames[index], element);
+            const CurrentGame = document.querySelectorAll('.card').length;
+            createGame(allGames[CurrentGame], element);
         }
     })
-})
+});
+

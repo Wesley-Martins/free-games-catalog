@@ -37,3 +37,9 @@ document.addEventListener('click', (event) => {
     } 
 })
 
+menuOptions.forEach(option => {
+    option.addEventListener('click', (event) => {
+       event.preventDefault();
+       console.log(option.value);
+    })
+})
