@@ -1,6 +1,6 @@
-let paramaters = new URL(window.location.href).search;
+let params = new URL(window.location.href).search;
 
-let endpoint = `https://free-to-play-games-database.p.rapidapi.com/api/games${paramaters}`;
+let endpoint = `https://free-to-play-games-database.p.rapidapi.com/api/games${params}`;
 let allGames = [];
 
 let counter = 0;
@@ -42,8 +42,7 @@ function createGame(game, lazyElement) {
     const platformIcon = game.platform == 'PC (Windows)' ? 'fa-brands fa-windows' : 'fa-solid fa-window-maximize';
 
     lazyElement.innerHTML = `
-    <div class="card__img-wrapper"><img class="card__img" src="${game.thumbnail}" alt="${game.title} thumbnail
-    "></div>
+    <div class="card__img-wrapper"><img class="card__img" src="${game.thumbnail}" alt="${game.title} thumbnail"></div>
     <div class="card__body">
         <a class="card__game-title" href="./game.html"><h4>${game.title}</h4></a>
         <p class="card__desc">${game.short_description}</p>
@@ -72,4 +71,3 @@ document.addEventListener('scroll', () => {
         }
     })
 });
-

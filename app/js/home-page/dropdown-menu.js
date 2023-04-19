@@ -12,7 +12,7 @@ document.addEventListener('click', (event) => {
     const element = event.target;
 
     menuOptions.forEach((option) => {
-        if(element == option) { lastClickedOption = element; }
+        if(element == option) { lastClickedOption = element }
     });
 
     for(let i = 0; i < openMenuBtns.length; i++) {
@@ -37,9 +37,13 @@ document.addEventListener('click', (event) => {
     } 
 })
 
-menuOptions.forEach(option => {
-    option.addEventListener('click', (event) => {
-       event.preventDefault();
-       console.log(option.value);
-    })
+window.addEventListener('load', () => {
+    const params = new URLSearchParams(window.location.search);
+    const platform = params.get('platform');
+    if(platform) {
+        let indexBtn = Array.from(openMenuBtns).findIndex(btn => btn.dataset.type == 'platform');
+        let indexOption = Array.from(menuOptions).findIndex(option => option.dataset.value == platform);
+
+        openMenuBtns[indexBtn].innerHTML = menuOptions[indexOption].innerHTML;
+    }
 })
