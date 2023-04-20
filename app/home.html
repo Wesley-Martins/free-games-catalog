@@ -24,12 +24,14 @@
         </header>
         <main class="main">
             <div class="top-container">
-                <h2 class="top-container__title">The best free games for PC and Browser!</h2>
-                <p class="top-container__desc">There are currently <i id="games-counter"></i> games available in the list!</p>
+                <div class="loading"></div>
+                <h2 class="top-container__title" id="title">The best free games for PC and Browser!</h2>
+                <p class="top-container__desc">There are currently <i id="games-counter"></i> games available in this list!</p>
             </div>
             <section class="games">
                 <fieldset class="options">
                     <div>
+                        <div class="loading"></div>
                         <span class="options__legend">Platform:</span>
                         <button class="options__drop-btn" data-type="platform">All Platforms<i class="fa-solid fa-circle-chevron-down fa-lg"></i></button>
                         <ul class="dropdown-menu hidden">
@@ -45,6 +47,7 @@
                         </ul>
                     </div>
                     <div>
+                        <div class="loading"></div>
                         <span class="options__legend">Genre/Tag:</span>
                         <button class="options__drop-btn" data-type="category">All Genres<i class="fa-solid fa-circle-chevron-down fa-lg"></i></button>
                         <ul class="dropdown-menu hidden">
@@ -173,6 +176,7 @@
                         </ul>
                     </div>
                     <div>
+                        <div class="loading"></div>
                         <span class="options__legend">Sort By:</span>
                         <button class="options__drop-btn" data-type="sort-by">Relevance<i class="fa-solid fa-circle-chevron-down fa-lg"></i></button>
                         <ul class="dropdown-menu hidden">
@@ -193,6 +197,7 @@
                 </fieldset>
                 <hr>
                 <div class="games-container">
+                    <div class="loading"></div>
                     <!-- <div class="card">
                         <div class="card__img-wrapper"><img class="card__img" src="./images/banner-images/banner-image-6.jpg" alt=""></div>
                         <div class="card__body">
@@ -208,8 +213,8 @@
             </section>
         </main>
     </div>
-    <script src="./js/home-page/dropdown-menu.js"></script>
+    <script src="./js/home-page/dropdownMenu.js" type="module"></script>
     <script src="./js/home-page/gamesRequest.js"></script>
-    <script src="./js/home-page/gamesFilter.js"></script>
+    <script src="./js/home-page/gamesParamaters.js" type="module"></script>
 </body>
 </html>

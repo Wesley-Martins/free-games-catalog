@@ -1,12 +1,10 @@
 let params = new URL(window.location.href).search;
-
 let endpoint = `https://free-to-play-games-database.p.rapidapi.com/api/games${params}`;
 let allGames = [];
 
-let counter = 0;
-
 const gamesContainerElement = document.querySelector('.games-container');
 const gamesCounterElement = document.getElementById('games-counter');
+let counter = 0;
 
 const requestOptions = {
     method: 'GET',
@@ -29,11 +27,19 @@ async function requestAllGames(endpoint) {
 
         const lazyElements = document.querySelectorAll('.lazy');
         for(let i = 0; i < 8; i++) {
-            createGame(allGames[i], lazyElements[i]);
-        }        
+            if(allGames[i]) {
+                createGame(allGames[i], lazyElements[i]);
+            }
+        }
+        
+        const loadingElements = document.querySelectorAll('.loading');
+        loadingElements.forEach(el => { el.remove() });
     } 
     catch(error) {
         console.log(error);
+
+        history.pushState({}, '', window.location.pathname);
+        location.reload();
     }
 }
 requestAllGames(endpoint);
