@@ -23,26 +23,26 @@
             </nav>
         </header>
         <main class="main">
-            <div class="game-background">
+            <div class="game-background" id="background">
                 <div class="game-background__gradient"></div>
             </div>
             <section class="game-profile">
                 <div class="sidebar">
                     <div class="sidebar__sticky">
-                        <img class="sidebar__img" src="./images/banner-images/banner-image-8.jpg" alt>
+                        <img class="sidebar__img" id="game-thumbnail" src alt>
                         <div class="sidebar__btns-container">
                             <i id="thb-up" class="sidebar__thumbs fa-solid fa-thumbs-up fa-xl"></i>
                             <i id="thb-down" class="sidebar__thumbs fa-solid fa-thumbs-down fa-xl"></i>
-                            <a class="sidebar__game-link" href="">Play Now<i class="fa-solid fa-up-right-from-square"></i></a>
+                            <a class="sidebar__game-link" id="game-link" href="">Play Now<i class="fa-solid fa-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="game-info">
-                    <h1>Game Title</h1>
+                    <h1 class="text-content" data-value="title">Game Title</h1>
                     <hr>
                     <div class="summary container">
                         <h2 class="title">About this game</h2>
-                        <p class="summary__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam delectus pariatur numquam alias hic sit fugiat, error non maxime, veritatis libero soluta a? Ad fuga nemo modi similique cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea, mollitia autem porro consequuntur aperiam iste ipsa reprehenderit accusamus? Nemo hic explicabo amet similique, architecto provident animi. Quo, delectus ex!</p>
+                        <p class="summary__desc text-content" data-value="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam delectus pariatur numquam alias hic sit fugiat, error non maxime, veritatis libero soluta a? Ad fuga nemo modi similique cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea, mollitia autem porro consequuntur aperiam iste ipsa reprehenderit accusamus? Nemo hic explicabo amet similique, architecto provident animi. Quo, delectus ex!</p>
                     </div>
                     <hr>
                     <div class="additional container">
@@ -50,27 +50,27 @@
                         <div class="additional__container">
                             <div class="additional__info">
                                 <span>Title</span>
-                                <p>Lorem ipsum dol</p>
+                                <p class="text-content" data-value="title"></p>
                             </div>
                             <div class="additional__info">
                                 <span>Developer</span>
-                                <p>Lorem ipsum</p>
+                                <p class="text-content" data-value="developer"></p>
                             </div>
                             <div class="additional__info">
                                 <span>Publisher</span>
-                                <p>Lorem ipsum</p>
+                                <p class="text-content" data-value="publisher"></p>
                             </div>
                             <div class="additional__info">
                                 <span>Release Date</span>
-                                <p>January 12, 2020</p>
+                                <p class="text-content" data-value="release_date"></p>
                             </div>
                             <div class="additional__info">
                                 <span>Genre</span>
-                                <p>Shooter</p>
+                                <p class="text-content" data-value="genre">Shooter</p>
                             </div>
                             <div class="additional__info">
                                 <span>Platform</span>
-                                <p>Windows</p>
+                                <p class="text-content" data-value="platform">Windows</p>
                             </div>
                         </div>
                     </div>
@@ -78,38 +78,34 @@
                     <div class="screenshots container">
                         <h2 class="title">Game Title Screenshots</h2>
                         <div class="screenshots__img-container">
-                            <div class="screenshots__img"><img src="./images/banner-images/banner-image-4.jpg" alt=""></div>
-                            <div class="screenshots__img"><img src="./images/banner-images/banner-image-5.jpg" alt=""></div>
-                            <div class="screenshots__img"><img src="./images/banner-images/banner-image-6.jpg" alt=""></div>
+                            <div class="screenshots__img"><img src alt=""></div>
+                            <div class="screenshots__img"><img src alt=""></div>
+                            <div class="screenshots__img"><img src alt=""></div>
                         </div>
                     </div>
                     <hr>
                     <div class="system container">
-                        <h2 class="title">Minimum System Requirements <i>(Windows)</i></h2>
-                        <div class="system__container">
+                        <h2 class="title">Minimum System Requirements <span id="platform">(Windows)</span></h2>
+                        <div class="system__container" id="system-container">
                             <div class="system__info">
                                 <span>OS</span>
-                                <p>Lorem ipsum dolor cum dolor</p>
+                                <p class="text-content sys" data-value="os">Lorem ipsum dolor cum dolor</p>
                             </div>
                             <div class="system__info">
                                 <span>Processor</span>
-                                <p>Lorem ipsum dolor cum dolor</p>
+                                <p class="text-content sys" data-value="processor">Lorem ipsum dolor cum dolor</p>
                             </div>
                             <div class="system__info">
                                 <span>Memory</span>
-                                <p>X GB RAM</p>
+                                <p class="text-content sys" data-value="memory">X GB RAM</p>
                             </div>
                             <div class="system__info">
                                 <span>Graphics</span>
-                                <p>Lorem ipsum dolor cum dolor</p>
+                                <p class="text-content sys" data-value="graphics">Lorem ipsum dolor cum dolor</p>
                             </div>
                             <div class="system__info">
                                 <span>Storage</span>
-                                <p>Lorem ipsum dolor cum dolor</p>
-                            </div>
-                            <div class="system__info">
-                                <span>Additional Notes</span>
-                                <p>Lorem ipsum dolor cum dolor</p>
+                                <p class="text-content sys" data-value="storage">Lorem ipsum dolor cum dolor</p>
                             </div>
                         </div>
                     </div>
@@ -117,5 +113,6 @@
             </section>
         </main>
     </div>
+    <script src="./js/game-page/gameIdRequest.js"></script>
 </body>
 </html>

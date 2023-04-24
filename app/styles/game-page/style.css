@@ -100,7 +100,6 @@ body {
 }
 
 .game-background {
-  background-image: url(../../images/banner-images/banner-image-7.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -172,7 +171,7 @@ body {
   }
 }
 .sidebar__img {
-  height: 220px;
+  height: 210px;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   margin-bottom: 1rem;

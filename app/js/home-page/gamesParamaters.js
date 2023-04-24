@@ -42,9 +42,9 @@ window.addEventListener('load', () => {
         menuBtn.innerHTML = menuOption.innerText + '<i class="fa-solid fa-circle-chevron-down fa-lg"></i>';
     })
 
-    
     const platformTitle = params.get('platform') ?? 'pc and browser';
     const categoryTitle = params.get('category') ?? '';
+    const title = `The best free ${categoryTitle} games for ${platformTitle}!`;
 
-    titleElement.innerHTML = `The best free ${categoryTitle} games for ${platformTitle}!`; 
+    titleElement.innerHTML = title;
 })
