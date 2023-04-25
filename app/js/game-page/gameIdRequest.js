@@ -11,8 +11,8 @@ const requestOptions = {
 const gameBackground = document.getElementById('background');
 const gameThumbnail = document.getElementById('game-thumbnail');
 const gameLink = document.getElementById('game-link');
-const gamePlatform = document.getElementById('platform');
 const textContent = document.querySelectorAll('.text-content');
+const screenshotsContainer = document.getElementById('screenshots-container');
 const screenshots = document.querySelectorAll('.screenshots__img');
 const systemContainer = document.getElementById('system-container');
 
@@ -26,29 +26,33 @@ function browserSystemText(title) {
 }
 
 function fillGamePage(game) {
-	gameBackground.style.backgroundImage = `url("${game.screenshots[0].image}")`;
-	gameThumbnail.src = game.thumbnail;
-	gameLink.href = game.game_url;
-	gamePlatform.innerHTML = game.platform == 'Windows' ? '(Windows)' : '(Web Browser)';
-
 	if(game.platform == 'Web Browser') {
 		const title = game.title;
 		systemContainer.innerHTML = browserSystemText(title);
 	}
-
-	textContent.forEach(el => {
-		const content = el.classList.contains('sys') ? 
-		game.minimum_system_requirements[el.dataset.value] :
-		game[el.dataset.value];
-
-		el.innerHTML = content;
-	});
-
-	for(let i = 0; i < screenshots.length; i++) {
-		const imgUrl = game.screenshots[i].image;
-		screenshots[i].firstElementChild.src = imgUrl;
+	else if(!game.minimum_system_requirements.os) {
+		systemContainer.parentElement.remove();
 	};
 
+	if(game.screenshots[0]) {
+		gameBackground.style.backgroundImage = `url("${game.screenshots[0].image}")`;
+
+		for(let i = 0; i < screenshots.length; i++) {
+			const imgUrl = game.screenshots[i].image;
+			screenshots[i].firstElementChild.src = imgUrl;
+		};
+	} 
+	else {
+		screenshotsContainer.remove()
+	}
+
+	gameThumbnail.src = game.thumbnail;
+	gameLink.href = game.game_url;
+
+	textContent.forEach(el => {
+		const content = game.minimum_system_requirements?.[el.dataset.value] ?? game[el.dataset.value];
+		el.innerHTML = content;
+	});
 }
 
 async function requestGame() {
@@ -57,10 +61,10 @@ async function requestGame() {
 		let game = await request.json();
 
 		fillGamePage(game);
-		console.log(game);
 	} 
 	catch(error) {
-		console.log(error);
+		history.pushState({}, '', '/app/home.html');
+		location.reload();
 	}
 }
 requestGame()
