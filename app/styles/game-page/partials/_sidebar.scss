@@ -41,6 +41,7 @@
     }
 
     &__btns-container {
+        position: relative;
         display: grid;
         align-items: center;
         grid-template-columns: auto auto 1fr;
@@ -79,5 +80,9 @@
                 margin-left: 5px;
             }
         }
+    }
+
+    .loading {
+        height: 220px;
     }
 }

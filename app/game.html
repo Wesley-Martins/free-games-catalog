@@ -14,6 +14,11 @@
 </head>
 <body>
     <div class="content">
+        <div class="open-img-container">
+            <button class="close-btn"><span>X</span></button>
+            <img src="./images/banner-images/banner-image-10.jpg" alt="">
+        </div>
+
         <header class="header">
             <nav class="navbar">
                 <a class="logo" href="home.html">
@@ -29,6 +34,7 @@
             <section class="game-profile">
                 <div class="sidebar">
                     <div class="sidebar__sticky">
+                        <div class="loading"></div>
                         <img class="sidebar__img" id="game-thumbnail" src alt>
                         <div class="sidebar__btns-container">
                             <i id="thb-up" class="sidebar__thumbs fa-solid fa-thumbs-up fa-xl"></i>
@@ -38,14 +44,19 @@
                     </div>
                 </div>
                 <div class="game-info">
-                    <h1 class="text-content" data-value="title">Game Title</h1>
+                    <div class="game-info__title">
+                        <div class="loading"></div>
+                        <h1 class="text-content" data-value="title">Game Title</h1>
+                    </div>
                     <hr>
                     <div class="summary container">
+                        <div class="loading"></div>
                         <h2 class="title">About this game</h2>
                         <p class="summary__desc text-content" data-value="description"></p>
                     </div>
                     <hr>
                     <div class="additional container">
+                        <div class="loading"></div>
                         <h2 class="title">Additional Information</h2>
                         <div class="additional__container">
                             <div class="additional__info">
@@ -76,15 +87,17 @@
                     </div>
                     <hr>
                     <div class="screenshots container" id="screenshots-container">
+                        <div class="loading"></div>
                         <h2 class="title">Game Title Screenshots</h2>
                         <div class="screenshots__img-container">
-                            <div class="screenshots__img"><img src alt=""></div>
-                            <div class="screenshots__img"><img src alt=""></div>
-                            <div class="screenshots__img"><img src alt=""></div>
+                            <div class="screenshots__img"><img class="screen-imgs" src alt=""></div>
+                            <div class="screenshots__img"><img class="screen-imgs" src alt=""></div>
+                            <div class="screenshots__img"><img class="screen-imgs" src alt=""></div>
                         </div>
                     </div>
                     <hr>
                     <div class="system container">
+                        <div class="loading"></div>
                         <h2 class="title">Minimum System Requirements (<span class="text-content" data-value="platform"></span>)</h2>
                         <div class="system__container" id="system-container">
                             <div class="system__info">

@@ -13,7 +13,7 @@ const gameThumbnail = document.getElementById('game-thumbnail');
 const gameLink = document.getElementById('game-link');
 const textContent = document.querySelectorAll('.text-content');
 const screenshotsContainer = document.getElementById('screenshots-container');
-const screenshots = document.querySelectorAll('.screenshots__img');
+const screenshots = document.querySelectorAll('.screen-imgs');
 const systemContainer = document.getElementById('system-container');
 
 function browserSystemText(title) {
@@ -39,7 +39,7 @@ function fillGamePage(game) {
 
 		for(let i = 0; i < screenshots.length; i++) {
 			const imgUrl = game.screenshots[i].image;
-			screenshots[i].firstElementChild.src = imgUrl;
+			screenshots[i].src = imgUrl;
 		};
 	} 
 	else {
@@ -51,7 +51,7 @@ function fillGamePage(game) {
 
 	textContent.forEach(el => {
 		const content = game.minimum_system_requirements?.[el.dataset.value] ?? game[el.dataset.value];
-		el.innerHTML = content;
+		el.textContent = content;
 	});
 }
 
@@ -60,7 +60,9 @@ async function requestGame() {
 		let request = await fetch(endpoint, requestOptions);
 		let game = await request.json();
 
+		const loadingElements = document.querySelectorAll('.loading');
 		fillGamePage(game);
+		loadingElements.forEach(el => { el.remove() });
 	} 
 	catch(error) {
 		history.pushState({}, '', '/app/home.html');
