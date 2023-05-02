@@ -14,11 +14,11 @@
 </head>
 <body>
     <div class="content">
-        <div class="carousel">
-            <button class="carousel__close carousel__btn">x</button>
-            <i class="fa-solid fa-chevron-left fa-2xl carousel__btn"></i>
-            <img src="./images/banner-images/banner-image-10.jpg" alt="">
-            <i class="fa-solid fa-chevron-right fa-2xl carousel__btn"></i>
+        <div class="carousel hidden" id="carousel-container">
+            <button class="carousel__close carousel__btn" id="close-carousel">x</button>
+            <i class="fa-solid fa-chevron-left fa-2xl carousel__btn" data-car-arrow="left"></i>
+            <img src alt="" id="carousel-img">
+            <i class="fa-solid fa-chevron-right fa-2xl carousel__btn" data-car-arrow="right"></i>
         </div>
 
         <header class="header">
@@ -128,6 +128,7 @@
             </section>
         </main>
     </div>
-    <script src="./js/game-page/gameIdRequest.js"></script>
-</body>
+    <script src="./js/game-page/gameIdRequest.js" type="module"></script>
+    <script src="./js/game-page/screenshotsCarousel.js" type="module"></script>
+</body> 
 </html>

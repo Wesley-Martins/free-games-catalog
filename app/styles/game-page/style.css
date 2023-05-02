@@ -226,81 +226,6 @@ body {
   height: 220px;
 }
 
-.carousel {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  z-index: 2000;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.carousel__close {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 2.25rem;
-  font-weight: bold;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-.carousel img {
-  margin: 0 10px;
-}
-@media (min-width: 0) {
-  .carousel img {
-    height: 230px;
-    width: 100%;
-  }
-}
-@media (min-width: 700px) {
-  .carousel img {
-    height: 400px;
-    width: 80%;
-  }
-}
-@media (min-width: 1024px) {
-  .carousel img {
-    height: 80vh;
-  }
-}
-@media (min-width: 1400px) {
-  .carousel img {
-    height: 100vh;
-  }
-}
-.carousel i {
-  cursor: pointer;
-  color: white;
-  margin: 5px;
-}
-@media (min-width: 0) {
-  .carousel i {
-    position: absolute;
-  }
-}
-@media (min-width: 700px) {
-  .carousel i {
-    position: static;
-  }
-}
-.carousel i:nth-of-type(1) {
-  left: 0;
-}
-.carousel i:nth-of-type(2) {
-  right: 0;
-}
-.carousel__btn:active {
-  transform: scale(0.9);
-  transform: translateY(2px);
-  transition: all 0.1s;
-}
-
 .game-profile {
   display: grid;
   padding-top: 1rem;
@@ -469,4 +394,79 @@ body {
   .system__info {
     flex-basis: 50%;
   }
+}
+
+.carousel {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel__close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.carousel img {
+  margin: 0 10px;
+}
+@media (min-width: 0) {
+  .carousel img {
+    height: 230px;
+    width: 100%;
+  }
+}
+@media (min-width: 700px) {
+  .carousel img {
+    height: 400px;
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel img {
+    height: 80vh;
+  }
+}
+@media (min-width: 1400px) {
+  .carousel img {
+    height: 100vh;
+  }
+}
+.carousel i {
+  cursor: pointer;
+  color: white;
+  margin: 5px;
+}
+@media (min-width: 0) {
+  .carousel i {
+    position: absolute;
+  }
+}
+@media (min-width: 700px) {
+  .carousel i {
+    position: static;
+  }
+}
+.carousel i:nth-of-type(1) {
+  left: 0;
+}
+.carousel i:nth-of-type(2) {
+  right: 0;
+}
+.carousel__btn:active {
+  transform: scale(0.9);
+  transform: translateY(2px);
+  transition: all 0.1s;
 }/*# sourceMappingURL=style.css.map */

@@ -8,15 +8,14 @@ const requestOptions = {
 	}
 }
 
+const loadingElements = document.querySelectorAll('.loading');
 const gameBackground = document.getElementById('background');
 const gameThumbnail = document.getElementById('game-thumbnail');
 const gameLink = document.getElementById('game-link');
 const textContent = document.querySelectorAll('.text-content');
-const screenshotsContainer = document.getElementById('screenshots-container');
-const screenshots = document.querySelectorAll('.screen-imgs');
-const systemContainer = document.getElementById('system-container');
+const screenshotsUrl = [];
 
-function browserSystemText(title) {
+function browserRequirementsText(title) {
 	const message = `
 	<p>${title}, being a browser based game, should run smoothly on practically any PC with a updated web-browser.</p>
 
@@ -25,26 +24,42 @@ function browserSystemText(title) {
 	return message
 }
 
-function fillGamePage(game) {
-	if(game.platform == 'Web Browser') {
+function fillSystemRequirements(game) {
+	const systemContainer = document.getElementById('system-container');
+	const platform = game.platform;
+	const requirementsExists = Boolean(game.minimum_system_requirements?.os);
+
+	if(platform == 'Web Browser') {
 		const title = game.title;
-		systemContainer.innerHTML = browserSystemText(title);
+		systemContainer.innerHTML = browserRequirementsText(title);
 	}
-	else if(!game.minimum_system_requirements.os) {
+	else if(!requirementsExists) {
 		systemContainer.parentElement.remove();
 	};
+}
+
+function fillScreenshots(game) {
+	const screenshotsContainer = document.getElementById('screenshots-container');
+	const screenshots = document.querySelectorAll('.screen-imgs');
 
 	if(game.screenshots[0]) {
 		gameBackground.style.backgroundImage = `url("${game.screenshots[0].image}")`;
 
 		for(let i = 0; i < screenshots.length; i++) {
 			const imgUrl = game.screenshots[i].image;
+
+			screenshotsUrl.push(imgUrl);
 			screenshots[i].src = imgUrl;
-		};
+		}
 	} 
 	else {
 		screenshotsContainer.remove()
 	}
+}
+
+function fillGamePage(game) {
+	fillSystemRequirements(game);
+	fillScreenshots(game);
 
 	gameThumbnail.src = game.thumbnail;
 	gameLink.href = game.game_url;
@@ -53,6 +68,7 @@ function fillGamePage(game) {
 		const content = game.minimum_system_requirements?.[el.dataset.value] ?? game[el.dataset.value];
 		el.textContent = content;
 	});
+	loadingElements.forEach(el => { el.remove() });
 }
 
 async function requestGame() {
@@ -60,9 +76,7 @@ async function requestGame() {
 		let request = await fetch(endpoint, requestOptions);
 		let game = await request.json();
 
-		const loadingElements = document.querySelectorAll('.loading');
 		fillGamePage(game);
-		loadingElements.forEach(el => { el.remove() });
 	} 
 	catch(error) {
 		history.pushState({}, '', '/app/home.html');
@@ -70,3 +84,5 @@ async function requestGame() {
 	}
 }
 requestGame()
+
+export { screenshotsUrl };
