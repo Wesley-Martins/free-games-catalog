@@ -79,7 +79,7 @@ async function requestGame() {
 		fillGamePage(game);
 	} 
 	catch(error) {
-		history.pushState({}, '', '/app/home.html');
+		history.pushState({}, '', '/app/index.html');
 		location.reload();
 	}
 }
