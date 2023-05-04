@@ -52,10 +52,31 @@
 
 .summary {
     &__desc {
+        max-height: 150px;
+        overflow-y: hidden;
+        border-bottom: 8px solid rgb($color-primary, 0.2);
         font-size: 1.2rem;
         line-height: 25px;
-        color: $text-color-secondary;
+        color: $text-color-secondary !important;
     }
+
+    &__read-btn {
+        border: none;
+        background: none;
+        margin-top: 10px;
+        font-size: 1.35rem;
+        color: $text-color-primary;
+        cursor: pointer;
+        &:hover {
+            color: $text-color-secondary;
+        }
+    }
+    
+    .expanded {
+        max-height: 100% !important;
+        border-bottom: none !important;
+    }
+
     .loading {
         min-height: 300px;
     }

@@ -29,11 +29,11 @@ carouselArrows.forEach(arrow => {
             case 'right':
                 currentIndex++;
         }
-        currentIndex = currentIndex < 0 ? screenshotsUrl.length - 1 :
-        currentIndex > screenshotsUrl.length - 1 ? 0 : currentIndex;
+        const i = currentIndex;
+        currentIndex = i < 0 ? screenshotsUrl.length - 1 : i > screenshotsUrl.length - 1 ? 0 : i;
 
         carouselImg.src = screenshotsUrl[currentIndex];
     });
-})
+});
 
 closeBtn.addEventListener('click', () => { carousel.classList.add('hidden') });

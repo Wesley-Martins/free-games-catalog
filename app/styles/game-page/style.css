@@ -200,11 +200,14 @@ body {
   cursor: pointer;
   margin-right: 15px;
 }
-.sidebar__btns-container #thb-up:hover {
-  color: rgb(43, 99, 43);
+.sidebar__btns-container .sidebar__thumbs:hover {
+  color: #a8b1b4;
 }
-.sidebar__btns-container #thb-down:hover {
-  color: rgb(183, 61, 61);
+.sidebar__btns-container .up {
+  color: rgb(43, 99, 43) !important;
+}
+.sidebar__btns-container .down {
+  color: rgb(183, 61, 61) !important;
 }
 .sidebar__btns-container .sidebar__game-link {
   border-radius: 4px;
@@ -310,9 +313,27 @@ body {
 }
 
 .summary__desc {
+  max-height: 150px;
+  overflow-y: hidden;
+  border-bottom: 8px solid rgba(27, 40, 56, 0.2);
   font-size: 1.2rem;
   line-height: 25px;
+  color: #a8b1b4 !important;
+}
+.summary__read-btn {
+  border: none;
+  background: none;
+  margin-top: 10px;
+  font-size: 1.35rem;
+  color: #c7d5e0;
+  cursor: pointer;
+}
+.summary__read-btn:hover {
   color: #a8b1b4;
+}
+.summary .expanded {
+  max-height: 100% !important;
+  border-bottom: none !important;
 }
 .summary .loading {
   min-height: 300px;
@@ -408,6 +429,11 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
+@media (min-width: 700px) {
+  .carousel {
+    padding: 0 30px;
+  }
+}
 .carousel__close {
   position: absolute;
   top: 0;
@@ -421,43 +447,14 @@ body {
 }
 .carousel img {
   margin: 0 10px;
-}
-@media (min-width: 0) {
-  .carousel img {
-    height: 230px;
-    width: 100%;
-  }
-}
-@media (min-width: 700px) {
-  .carousel img {
-    height: 400px;
-    width: 80%;
-  }
-}
-@media (min-width: 1024px) {
-  .carousel img {
-    height: 80vh;
-  }
-}
-@media (min-width: 1400px) {
-  .carousel img {
-    height: 100vh;
-  }
+  max-height: 680px;
+  width: 100%;
 }
 .carousel i {
   cursor: pointer;
   color: white;
   margin: 5px;
-}
-@media (min-width: 0) {
-  .carousel i {
-    position: absolute;
-  }
-}
-@media (min-width: 700px) {
-  .carousel i {
-    position: static;
-  }
+  position: absolute;
 }
 .carousel i:nth-of-type(1) {
   left: 0;

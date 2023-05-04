@@ -54,12 +54,12 @@
             cursor: pointer;
             margin-right: 15px;
         }
-        #thb-up:hover {
-            color: rgb(43, 99, 43);
+        .sidebar__thumbs:hover {
+            color: $text-color-secondary;
         }
-        #thb-down:hover {
-            color: rgb(183, 61, 61);
-        }
+
+        .up { color: rgb(43, 99, 43) !important; }
+        .down { color:rgb(183, 61, 61) !important; }
 
 
         .sidebar__game-link {
