@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Karla&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap);
-.slide-right {
-  left: 54% !important;
-}
-
 .hidden {
   display: none !important;
 }
@@ -47,7 +43,7 @@ body {
 }
 @media (min-width: 1850px) {
   .header {
-    padding: 0 0;
+    padding: 0;
   }
 }
 .header .navbar {
@@ -75,10 +71,6 @@ body {
 .header .logo__icon {
   height: 36px;
   width: 36px;
-}
-
-.slide-right {
-  left: 54% !important;
 }
 
 .hidden {
@@ -134,10 +126,6 @@ body {
 }
 .top-container__desc i {
   color: #c7d5e0;
-}
-
-.slide-right {
-  left: 54% !important;
 }
 
 .hidden {
@@ -379,7 +367,7 @@ hr {
 }
 @media (min-width: 0) {
   .card__desc {
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
 }
 @media (min-width: 1024px) {

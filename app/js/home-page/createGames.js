@@ -8,10 +8,9 @@ function createGame(game, lazyElement) {
     <div class="card__body">
         <a class="card__game-title" href="./game.html?id=${game.id}"><h4>${game.title}</h4></a>
         <p class="card__desc">${game.short_description}</p>
-            <div class="card__icons">
-                <span class="card__genre">${game.genre}</span>
-                <i class="${platformIcon} fa-lg"></i>
-            </div>
+        <div class="card__icons">
+            <span class="card__genre">${game.genre}</span>
+            <i class="${platformIcon} fa-lg"></i>
         </div>
     </div>
     `;

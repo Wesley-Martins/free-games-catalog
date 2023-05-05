@@ -30,7 +30,7 @@ menuOptions.forEach(option => {
 
 window.addEventListener('popstate', () => {
     location.reload();
-})
+});
 
 window.addEventListener('load', () => {
     const params = new URLSearchParams(window.location.search);

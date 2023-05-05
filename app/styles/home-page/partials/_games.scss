@@ -218,7 +218,7 @@ $row-gap: 1.6rem;
         text-overflow: ellipsis;
         overflow: hidden;
         @media(min-width: 0) {
-            font-size: 1rem;
+            font-size: 1.08rem;
         }
         @media(min-width: 1024px) {
             font-size: 1.2rem;
@@ -240,6 +240,4 @@ $row-gap: 1.6rem;
             margin-right: 5px;
         }
     }
-
-
 }

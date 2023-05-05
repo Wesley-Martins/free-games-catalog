@@ -2,7 +2,6 @@ import { screenshotsUrl } from './gameIdRequest.js';
 
 const carousel = document.getElementById('carousel-container');
 const screenshots = document.querySelectorAll('.screen-imgs');
-const closeBtn = document.getElementById('close-carousel');
 const carouselImg = document.getElementById('carousel-img');
 const carouselArrows = document.querySelectorAll('[data-car-arrow]');
 
@@ -36,4 +35,10 @@ carouselArrows.forEach(arrow => {
     });
 });
 
-closeBtn.addEventListener('click', () => { carousel.classList.add('hidden') });
+carousel.addEventListener('click', (event) => {
+    const clicked = event.target;
+
+    if(!Array.from(carouselArrows).includes(clicked) && clicked != carouselImg) {
+        carousel.classList.add('hidden');
+    };
+});

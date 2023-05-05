@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Karla&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap);
-.slide-right {
-  left: 54% !important;
-}
-
 .hidden {
   display: none !important;
 }
@@ -47,7 +43,7 @@ body {
 }
 @media (min-width: 1850px) {
   .header {
-    padding: 0 0;
+    padding: 0;
   }
 }
 .header .navbar {
@@ -115,10 +111,6 @@ body {
   background: linear-gradient(90deg, #1B2838 0%, rgba(35, 46, 46, 0.1) 16.15%, rgba(35, 46, 46, 0.1) 80.21%, #1B2838 100%), linear-gradient(180deg, rgb(39, 43, 48) 0%, rgba(0, 0, 0, 0.58) 33.85%, #1B2838 100%);
   height: 100%;
   width: 100%;
-}
-
-.slide-right {
-  left: 54% !important;
 }
 
 .hidden {
@@ -245,10 +237,6 @@ body {
 }
 .game-profile .loading {
   top: 0;
-}
-
-.slide-right {
-  left: 54% !important;
 }
 
 .hidden {
@@ -453,7 +441,6 @@ body {
 .carousel i {
   cursor: pointer;
   color: white;
-  margin: 5px;
   position: absolute;
 }
 .carousel i:nth-of-type(1) {
